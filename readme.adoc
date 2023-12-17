@@ -290,7 +290,7 @@ In order for the placeholder README to be displayed on GitHub, you need to merge
 [source,console]
 ----
 git checkout main
-git merge docs/readme-placeholder -s ours --allow-unrelated-histories
+git merge docs/readme-placeholder m 'docs(readme): merge branch docs/readme-placeholder' -s ours --allow-unrelated-histories
 ----
 
 . *Push the Changes:*
@@ -311,7 +311,7 @@ After you've published the placeholder README on your GitHub repository, you'll 
 [source,console]
 ----
 git checkout main
-git merge docs/readme-draft -m 'docs(readme):  publish draft' --allow-unrelated-histories
+git merge docs/readme-draft -m 'docs(readme): publish draft' --allow-unrelated-histories
 git push
 ----
 
