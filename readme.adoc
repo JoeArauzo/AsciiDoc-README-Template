@@ -81,10 +81,6 @@ Asciidoc is a more powerful markup language designed for more complex content. A
 
 AsciiDoc is simply plain-text.  You can author documents in your favorite text editor of choice, such as https://code.visualstudio.com/[Visual Studio Code] with a proper https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[extension], or any derivative of https://www.vim.org/[VIM] (https://github.com/neovim/neovim#readme[Neovim], https://github.com/qvacua/vimr#readme[VimR]).  If you're just getting started with AsciiDoc, you may want to try https://asciidocfx.com/[AsciidocFX], until the markup syntax becomes second nature to you. The choice is yours.
 
-[NOTE]
-This README template does not include dependencies on features, such as Shields.io, which require the repository to be a public repository.
-
-
 === Built With
 //This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * https://asciidoctor.org/[Asciidoctor] - a _fast_ text processor and publishing toolchain for converting AsciiDoc content to other formats.
@@ -121,7 +117,7 @@ You might be prompted to install the _Command Line Developer Tools_ from _Apple_
 brew install gh
 ----
 
-*You may now proceed to _Clone This Repository_.*
+*You may now proceed to _<<Clone This Repository>>_.*
 
 ==== Installing _GitHub CLI_ on _Windows_
 You may open either a Command Prompt, PowerShell, or https://github.com/microsoft/terminal#readme[Windows Terminal].
@@ -134,7 +130,7 @@ You may open either a Command Prompt, PowerShell, or https://github.com/microsof
 winget install --id GitHub.cli
 ----
 
-*You may now proceed to _Clone This Repository_.*
+*You may now proceed to _<<Clone This Repository>>_.*
 
 ==== Installing _GitHub CLI_ on _Linux_
 The GitHub CLI is available for a variety of Linux distributions.
@@ -155,7 +151,7 @@ sudo apt install gh -y
 sudo dnf install gh
 ----
 
-*You may now proceed to _Clone This Repository_.*
+*You may now proceed to _<<Clone This Repository>>_.*
 
 
 === Clone This Repository
@@ -229,7 +225,7 @@ For example:
 +
 [source,console]
 ----
-git checkout -b docs/README-draft
+git checkout -b docs/readme-draft
 ----
 
 . *Push the New Branch to Remote:*
@@ -237,7 +233,7 @@ Push the new branch to the remote repository (e.g., GitHub), using the following
 +
 [source,console]
 ----
-git push origin docs/README-draft
+git push origin docs/readme-draft
 ----
 
 Now you can proceed to personalize this README for your own needs. Additional instructions will be provided below to get your personalized README to show up on GitHub. Unitl ready, a placeholder README can be used.
@@ -251,7 +247,7 @@ Use the `git checkout` command to switch to the branch with the placholder READM
 +
 [source,console]
 ----
-git checkout docs/README-placeholder
+git checkout docs/readme-placeholder
 ----
 
 . *Modify the Placeholder README:*
@@ -277,7 +273,7 @@ You now have changes in the placeholder README that you need to commit before pr
 [source,console]
 ----
 git add .
-git commit -m "DOCS(README): set placeholder"
+git commit -m "docs(readme): set placeholder"
 ----
 
 . *Push the Placeholder Branch to Remote (Optional):*
@@ -285,7 +281,7 @@ If you want to push the changes just made to the remote repository (e.g., GitHub
 +
 [source,console]
 ----
-git push origin docs/README-placeholder
+git push origin docs/readme-placeholder
 ----
 
 . *Merge Placeholder into Main Branch:*
@@ -294,7 +290,7 @@ In order for the placeholder README to be displayed on GitHub, you need to merge
 [source,console]
 ----
 git checkout main
-git merge docs/README-placeholder -s ours --allow-unrelated-histories
+git merge docs/readme-placeholder -s ours --allow-unrelated-histories
 ----
 
 . *Push the Changes:*
@@ -308,14 +304,14 @@ Your personalized README is now displayed on GitHub.
 
 
 === Publish Your README
-After you've published the placeholder README on your GitHub repository, you'll likely work on personalizing your README on the `docs/README-draft` branch. When ready, you must replace the placeholder README on the main branch. Follow these steps. 
+After you've published the placeholder README on your GitHub repository, you'll likely work on personalizing your README on the `docs/readme-draft` branch. When ready, you must replace the placeholder README on the main branch. Follow these steps. 
 
 . *Merge README Draft into Main Branch:*
 +
 [source,console]
 ----
 git checkout main
-git merge docs/README-draft -m 'DOCS(README):  publish draft' --allow-unrelated-histories
+git merge docs/readme-draft -m 'docs(readme):  publish draft' --allow-unrelated-histories
 git push
 ----
 
