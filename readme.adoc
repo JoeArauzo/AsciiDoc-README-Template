@@ -1,0 +1,369 @@
+= AsciiDoc README Template 
+:doctype: article
+:description: A README template written in AsciiDoc markup
+:license-type: MIT
+:author: Author Name 
+:email: author.name@domain.com
+:revnumber: v0.1
+:revdate: 2023-03-10
+:repository-url: https://github.com/JoeArauzo/AsciiDoc-README-Template
+:documentation-url: https://asciidoctor.org/docs/asciidoc-writers-guide/
+:source-highlighter: rouge
+:rouge-style: github
+:!showtitle:
+:icons: font
+:toc: preamble
+:imagesdir: assets/images
+:hardbreaks-option:
+
+
+
+// GitHub doesn't render asciidoc exactly as intended, so we adjust settings and utilize some html
+ifdef::env-github[]
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+++++
+
+<p align="center">
+  
+  <!-- REPLACE THE FOLLOWING URL WITH YOUR REPOSITORY'S URL -->
+  <a href="https://github.com/JoeArauzo/README-Template-AsciiDoc">
+    
+    <!-- REPLACE THE PLACEHOLDER LOGO WITH YOUR OWN LOGO AND ADJUST THE SIZE ACCORDINGLY -->
+    <img src="assets/images/placeholder-logo.png" alt="Logo" width="30%" height="30%"></a>
+  
+  <!-- REPLACE THE FOLLOWING WITH YOUR REPOSITORY/PROJECT TITLE -->
+  <h3 align="center">README Template AsciiDoc</h3>
+  
+  <p align="center">
+  
+    <!-- REPLACE THE FOLLOWING WITH YOUR REPOSITORY/PROJECT'S SHORT DESCRIPTION -->
+    A README template written in AsciiDoc markup
+  
+    <br>
+    
+    <!-- REPLACE THE FOLLOWING URL WITH YOUR REPOSITORY'S DOCUMENTATION URL -->
+    <a href="https://asciidoctor.org/docs/asciidoc-writers-guide/"><strong>Explore the docs »</strong></a>
+    
+  </p>
+</p>
+
+++++
+
+endif::[]
+
+// This conditional section applies to all environments, except GitHub
+ifndef::env-github[]
+image::placeholder-logo.png[Logo, align=center, width=30%]
+[.text-center]
+[.lead]
+*{doctitle}*
+
+[.text-center]
+_{description}_ +
+{documentation-url}[Explore the docs »]
+endif::[]
+
+
+== Purpose
+This template is offered to help create new repositories and kickstart your documentation process. It includes boilerplate text for a well-structured README. As a convenience, it also includes a placeholder README for what visitors to your repository will see while work is still in progess. See the placeholder screenshot below.
+
+image::placeholder-screenshot.png[Screenshot, align=center, width=100%]
+
+Why? Why another README template when so many README templates already exist? *This README is written in AsciiDoc markup*, _instead of Markdown_.  The syntax is https://docs.asciidoctor.org/asciidoc/latest/asciidoc-vs-markdown/[very similar to markdown] and easy to learn. Documents written in AsciiDoc markup are more easily converted to HTML5, PDF, EPUB, and other formats.
+
+Asciidoc is a more powerful markup language designed for more complex content. Asciidoc uses a more extensive syntax than Markdown, allowing you to create more advanced formatting elements such as tables, footnotes, and cross-references. All without the headaches of inconsistent implementations frequently found with Markdown. For writing high-quality documentation, it just works.
+
+AsciiDoc is simply plain-text.  You can author documents in your favorite text editor of choice, such as https://code.visualstudio.com/[Visual Studio Code] with a proper https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[extension], or any derivative of https://www.vim.org/[VIM] (https://github.com/neovim/neovim#readme[Neovim], https://github.com/qvacua/vimr#readme[VimR]).  If you're just getting started with AsciiDoc, you may want to try https://asciidocfx.com/[AsciidocFX], until the markup syntax becomes second nature to you. The choice is yours.
+
+=== Built With
+//This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* https://asciidoctor.org/[Asciidoctor] - a _fast_ text processor and publishing toolchain for converting AsciiDoc content to other formats.
+* https://asciidocfx.com/[AsciidocFX] - a book / document editor to build PDF, Epub, Mobi and HTML books, documents, and slides.
+
+
+== Getting Started
+Follow these procedures to set up a local repository for your project.
+
+=== Prerequisites
+These procedures utilize the GitHub CLI and assume you are hosting your repository on GitHub. Select the procedure which matches your operating system.
+
+==== Installing _GitHub CLI_ on _macOS_
+[NOTE]
+This assumes the http://brew.sh/[_Homebrew_] package manager is already installed.
+
+*Copy & paste the following* into the terminal window and *press* `Return`.
+
+[source,console]
+----
+brew install gh
+----
+
+*You may now proceed to _<<Clone This Repository>>_.*
+
+==== Installing _GitHub CLI_ on _Windows_
+You may open either a Command Prompt, PowerShell, or https://github.com/microsoft/terminal#readme[Windows Terminal].
+
+*Copy & paste the following* into the _PowerShell_ window and *press* `Return`.
+
+[source,powershell]
+----
+winget install --id GitHub.cli
+----
+
+*You may now proceed to _<<Clone This Repository>>_.*
+
+==== Installing _GitHub CLI_ on _Linux_
+The GitHub CLI is available for a variety of Linux distributions.
+===== Debian, Ubuntu Linux, Raspberry Pi OS (APT)
+https://help.ubuntu.com/community/UsingTheTerminal[*Open a terminal window*]. *Copy & paste the following* into the terminal window and *press* `Return`. You may be prompted to enter your password.
+
+[source,console]
+----
+sudo apt update
+sudo apt install gh -y
+----
+
+===== Fedora, CentOS, Red Hat Enterprise Linux (dnf)
+*Open a terminal. Copy & paste the following* into the terminal window and *hit* `Return`. You may be prompted to enter your password.
+
+[source,console]
+----
+sudo dnf install gh
+----
+
+*You may now proceed to _<<Clone This Repository>>_.*
+
+
+=== Clone This Repository
+This repository is available on GitHub as a template repository. As a convenience, the branches within this repository include a _boilerplate_ README, as well as a _placeholder_ README.  To ensure your repository includes these branches, you'll need to create your repository using the GitHub CLI. The following procedure will clone and create a local copy of this repository.
+
+. *Launch your terminal.*
+
+. *Change Working Directory:*
+Change your working directory to the location where you want to create the local repository. Use the `cd` command and replace `WORKING_DIRECTORY` with the path to the directory of your choice:
++
+[source,console]
+----
+cd WORKING_DIRECTORY
+----
+
+. *Authenticate with GitHub:*
+If you haven't already authenticated with GitHub CLI, run the following command and follow the prompts:
++
+[source,console]
+----
+gh auth login
+----
+
+. *Create a Local Clone from a Template Repository:*
+Use the `gh rep create` command with the `--template` option to create a clone of a template repository. Use the `--clone` option to create a local clone. Use the `--public` option to make the new repostory public, or use the `--internal` or `--private` options instead. Use the `--include-all-branches` option to include all branches from the template repository. Replace `NEW_REPO_NAME` with a name of your choice. Replace `TEMPLATE_OWNER` with the template repository owner's username or organization, and `TEMPLATE_REPO` with the template repository name:
++
+[source,console]
+----
+gh repo create --clone --public --include-all-branches MY_NEW_REPO --template TEMPLATE_OWNER/TEMPLATE_REPO
+----
+For example:
++
+[source,console]
+----
+gh repo create --clone --public --include-all-branches my-new-repo --template JoeArauzo/AsciiDoc-README-Template
+----
+You should see output similar to the following:
++
+[source,console]
+----
+Created repository YOUR_USERNAME/my-new-repo on GitHub
+Cloning into 'my-new-repo'
+----
+
+. Navigate to the Local Repository:
+Change your working directory to the newly created local repository:
++
+[source,console]
+----
+cd NEW_REPO_NAME
+----
+
+
+== Usage
+The following instructions are provided as a way to get started with setting up your new repository.
+
+[NOTE]
+This assumes git is already installed and configured on your system.
+
+=== Create a Branch For Your README Draft
+Your new repository includes the boilerplate text you're reading here. Create a branch so you can use this text as a starting point for authoring your own README.
+
+. *Create a Branch:*
+Continuing from your local repository, use the `git checkout` command with the `-b` option to create and switch to the new branch in one step. Replace `NEW_BRANCH_NAME` with the name of your choice:
++
+[source,console]
+----
+git checkout -b NEW_BRANCH_NAME
+----
+For example:
++
+[source,console]
+----
+git checkout -b docs/readme-draft
+----
+
+. *Push the New Branch to Remote:*
+Push the new branch to the remote repository (e.g., GitHub), using the following command:
++
+[source,console]
+----
+git push origin docs/readme-draft
+----
+
+Now you can proceed to personalize this README for your own needs. Additional instructions will be provided below to get your personalized README to show up on GitHub. Unitl ready, a placeholder README can be used.
+
+
+=== Display a README Placeholder on GitHub
+A README placehholder can be displayed on GitHub until your own README is ready. The use of a placholder is a good practice, by providing visitors with a hint of what's in store. This template includes a branch with a placholder you can personalize for your own needs.
+
+. *Checkout the README Placeholder branch:*
+Use the `git checkout` command to switch to the branch with the placholder README.
++
+[source,console]
+----
+git checkout docs/readme-placeholder
+----
+
+. *Personalize the README Placeholder:*
+Modify the README placeholder by editing the file and with your preferred metadata, title, description and optional link.
++
+[source,asciidoc]
+----
+= <Enter the Project Title>
+:doctype: article
+:description: <Enter a short description of the project>
+:license-type: <enter license type>
+:author: Author Name 
+:email: author.name@domain.com
+:revnumber: v0.1
+:revdate: 2021-01-01
+----
+[TIP]
+The example listed above is only a starting point for personalizing the README. Take a close look at the lines within to ensure you replace all the placeholder values. For example, don't forget to modify the HTML code near the top of the README which is used to work around a display issue on GitHub.
+
+. *Commit Changes:*
+You now have changes in the README placeholder that you must commit before proceeding.
++
+[source,console]
+----
+git commit -am "docs(readme): personalize placeholder"
+----
+
+. *Push the Placeholder Branch to Remote:*
+Push the changes to the remote repository (e.g., GitHub), using:
++
+[source,console]
+----
+git push origin docs/readme-placeholder
+----
+
+. *Merge Placeholder into Main Branch:*
+To display the README placeholder on GitHub, you must merge the placeholder branch into the main branch. Use the the following commands:
++
+[source,console]
+----
+git checkout main
+rm readme.adoc
+git rm readme.adoc
+git commit -am "docs(readme): purge readme"
+git merge docs/readme-placeholder -m "docs(readme): merge branch 'docs/readme-placeholder'" --allow-unrelated-histories
+----
+
+. *Push the Changes:*
+Push the changes so they show up in GitHub.
++
+[source,console]
+----
+git push
+----
+Your personalized README placeholder is now displayed on GitHub.
+
+
+=== Publish Your README Draft
+After you've displayed the README placeholder on GitHub, you can resume work on your README on the `docs/readme-draft` branch. Follow these steps. 
+
+. *Checkout the README Draft branch:*
+Use the `git checkout` command to switch to the branch with the README draft.
++
+[source,console]
+----
+git checkout docs/readme-draft
+----
+
+. *Personalize your README Draft:*
+Make whatever changes you want to the readme.adoc file, then commit those changes.
++
+[source,console]
+----
+git commit -am "docs(readme): personalize draft"
+----
+
+. *Merge README Draft into Main Branch:*
+Use the following commands:
++
+[source,console]
+----
+git checkout main
+rm readme.adoc
+git rm readme.adoc
+git commit -am "docs(readme): purge readme"
+git merge docs/readme-draft -m "docs(readme): merge branch 'docs/readme-draft'" --allow-unrelated-histories
+----
+
+. *Push the Changes:*
+Push the changes so they show up in GitHub.
++
+[source,console]
+----
+git push
+----
+Your README draft is now merged into the main branch and displayed on GitHub.
+
+
+For more AsciiDoc examples, please refer to the {documentation-url}[Documentation].
+
+
+== FAQ
+[qanda]
+Why this approach?::
+  Because...
+Could this be done better?::
+  Certainly...
+
+
+== Roadmap
+See the {repository-url}/issues[open issues] for a list of proposed features (and known issues).
+
+
+== Contributing
+. Clone repo and create a new branch: `$ git checkout {repository-url} -b name_for_new_branch`.
+. Make changes and test.
+. Submit Pull Request with comprehensive description of changes.
+
+
+== Change Log
+See link:CHANGELOG.adoc[CHANGELOG].
+
+== License
+Distributed under the {license-type} License. See `LICENSE` for more information.
+
+
+== Contact
+{author} - {email}
+
+Project Link: {repository-url}
+
+
+== Acknowledgements
